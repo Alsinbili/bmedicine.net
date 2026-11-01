@@ -1,6 +1,5 @@
-# The built site is published to the gh-pages branch by M03_publish_bmedicine_site.sh
+# The built site is made by the build (on the Mac to preview, on GitHub to publish)
 site/
-forward/
 # Private notes (account names, renewal dates) stay on the Mac
 M01_notes_bmedicine_site.md
 .DS_Store
