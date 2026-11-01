@@ -9,8 +9,8 @@ HTML comment at its top gives title, description, og_image, body_class and, for 
 the page's content. {{hub_subnav:<page>}} puts Hub's own menu on Hub's pages. Pages keep their place:
 src/hub/privacy/index.html becomes bmedicine.net/hub/privacy/. src/assets/ is copied as it is.
 
-The site lives at https://bmedicine.github.io (free, GitHub Pages). The build also makes forward/, a small site
-for the bmedicine.net name: every address there sends the visitor to the same page on bmedicine.github.io.
+The site lives at https://bemedicine.github.io (free, GitHub Pages). The build also makes forward/, a small site
+for the bmedicine.net name: every address there sends the visitor to the same page on bemedicine.github.io.
 
 The build checks what it can: every internal link and image leads somewhere, no em or en dashes in the text,
 no placeholder left. site/ and forward/ are what get uploaded; never edit them by hand.
@@ -20,7 +20,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 SRC, OUT, FORWARD = HERE / "src", HERE / "site", HERE / "forward"
-SITE_URL = "https://bmedicine.github.io"
+SITE_URL = "https://bemedicine.github.io"
 FORWARDING_NAME = "bmedicine.net"
 
 HUB_PAGES = [("home", "/hub/", "Hub"), ("support", "/hub/support/", "Support"),
@@ -104,17 +104,17 @@ FORWARD_PAGE = """<!doctype html>
 <style>body{{font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:#F7FBFC;
 color:#1A1A1A;display:grid;place-items:center;min-height:90vh;margin:0}}a{{color:#BC1922}}</style>
 </head>
-<body><p>B Medicine is now at <a href="{site}/">bmedicine.github.io</a>.</p></body>
+<body><p>B Medicine is now at <a href="{site}/">{name}</a>.</p></body>
 </html>
 """
 
 
 def build_forward():
-    """bmedicine.net's own small site: the same page at bmedicine.github.io, wherever the visitor arrives."""
+    """bmedicine.net's own small site: the same page at bemedicine.github.io, wherever the visitor arrives."""
     if FORWARD.exists():
         shutil.rmtree(FORWARD)
     FORWARD.mkdir()
-    page = FORWARD_PAGE.format(site=SITE_URL)
+    page = FORWARD_PAGE.format(site=SITE_URL, name=SITE_URL.split("//")[1])
     (FORWARD / "index.html").write_text(page, encoding="utf-8")
     (FORWARD / "404.html").write_text(page, encoding="utf-8")
     (FORWARD / "CNAME").write_text(FORWARDING_NAME + "\n")
