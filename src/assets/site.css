@@ -206,6 +206,10 @@ section { padding: 88px 0; }
 .footer-brand img { width: 56px; height: 56px; }
 .footer-brand p { margin: 0; color: var(--ink-2); }
 .footer-brand strong { color: var(--ink); }
+.social { display: flex; gap: 10px; margin-top: 10px !important; }
+.social a { color: var(--slate-2); display: inline-flex; }
+.social a:hover { color: var(--red); }
+.social svg { width: 22px; height: 22px; }
 .footer-links { display: flex; flex-direction: column; gap: 6px; }
 .footer-links a { color: var(--slate); text-decoration: none; font-size: .95rem; }
 .footer-links a:hover { color: var(--red); }
