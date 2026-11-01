@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{title}}</title>
+<meta name="description" content="{{description}}">
+<link rel="canonical" href="https://bmedicine.net{{path}}">
+<meta property="og:title" content="{{title}}">
+<meta property="og:description" content="{{description}}">
+<meta property="og:url" content="https://bmedicine.net{{path}}">
+<meta property="og:image" content="https://bmedicine.net/assets/img/{{og_image}}">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#F7FBFC">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body class="{{body_class}}">
+<a class="skip" href="#main">Skip to the content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="/" aria-label="B Medicine, home">
+      <img src="/assets/img/logo-wide.png" alt="B Medicine, enjoy learning" width="900" height="344">
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="/#teaching">Teaching</a>
+      <a href="/#apps">Apps</a>
+      <a href="/#about">About</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+{{content}}
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <img src="/assets/img/bmark.png" alt="" width="56" height="56">
+      <p><strong>B Medicine</strong><br>Enjoy learning</p>
+    </div>
+    <nav class="footer-links" aria-label="Footer">
+      <p class="footer-head">Teaching</p>
+      <a href="/#teaching">Lectures and videos</a>
+      <a href="/#about">About</a>
+      <a href="/#contact">Contact</a>
+      <a href="/privacy/">Site privacy</a>
+    </nav>
+    <nav class="footer-links" aria-label="Hub">
+      <p class="footer-head">Hub for Mac</p>
+      <a href="/hub/">About Hub</a>
+      <a href="/hub/support/">Support</a>
+      <a href="/hub/privacy/">Privacy Policy</a>
+      <a href="/hub/terms/">Terms</a>
+    </nav>
+  </div>
+  <div class="wrap footer-small">
+    <p>&copy; {{year}} B Medicine (Ahmed Alsinbili). B Medicine is an independent teaching project; the views here
+    are my own, not those of my employers. The teaching is for healthcare professionals and students and is not
+    medical advice for patients. This site sets no cookies and has no analytics.</p>
+  </div>
+</footer>
+</body>
+</html>
