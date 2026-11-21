@@ -193,6 +193,14 @@ section { padding: 88px 0; }
 .price-box .price { font-size: 1.7rem; font-weight: 800; margin-bottom: 6px; }
 .price-box .price-then { font-size: 1.1rem; font-weight: 700; margin-bottom: 14px; }
 .small { font-size: .9rem; color: var(--ink-2); }
+.store-row { margin: 10px 0 4px; }
+.qr-card {
+  display: flex; align-items: center; gap: 24px; background: var(--white); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 20px 24px; box-shadow: var(--shadow);
+}
+.qr-card img { width: 172px; height: 172px; flex: none; display: block; }
+.qr-card p { margin: 0 0 12px; }
+.qr-card p:last-child { margin-bottom: 0; }
 
 /* Prose pages (privacy, terms, support) */
 .prose { max-width: 760px; margin: 0 auto; padding: 64px 24px 88px; }
@@ -248,5 +256,6 @@ section { padding: 88px 0; }
   .site-nav { justify-content: center; }
   .site-nav a { padding: 6px 10px; }
   .cards { grid-template-columns: 1fr; }
+  .qr-card { flex-direction: column; text-align: center; }
   html { scroll-padding-top: 12px; }
 }
